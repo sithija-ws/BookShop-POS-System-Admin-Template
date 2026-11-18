@@ -19,8 +19,8 @@ enum userStatus {
 }
 
 enum userRole {
-  CUSTOMER
-  
+  CASHIER
+  ADMIN
 }
 
 model User {
@@ -31,4 +31,5 @@ model User {
   password   String
   status     userStatus @default(ACTIVE)
   privilages String[]   @default([])
+  role userRole @default(CASHIER)
 }
